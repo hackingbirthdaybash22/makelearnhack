@@ -8,8 +8,8 @@
       </h1>
     </div>
     <p id="text">Your guide to&nbsp;
-      <span class="tooltip"><u id="hackathons"> hackathons.
-        <span class="tooltiptext">A hackathon is an event organized by
+      <span class="tt"><u id="hackathons"> hackathons.
+        <span class="tttext">A hackathon is an event organized by
             a company for tech enthusiasts putting up hardware or software-related challenges to be solved over a fixed
             time duration, generally two days or more.
         </span></u></span>
@@ -78,13 +78,13 @@ export default {
   cursor: pointer;
 }
 
-/* Tooltip CSS gotten from w3schools*/
-.tooltip {
+/* tooltip CSS gotten from w3schools*/
+.tt {
   position: relative;
   display: inline-block;
 }
 
-.tooltip .tooltiptext {
+.tt .tttext {
   font-size: 15px;
   visibility: hidden;
   width: 550px;
@@ -97,10 +97,10 @@ export default {
   z-index: 1;
   top: 100%;
   left: 0%;
-  margin-left: -60px;
+  margin-left: -100px;
 }
 
-.tooltip .tooltiptext::after {
+.tt .tttext::after {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -111,7 +111,7 @@ export default {
   border-color: transparent transparent black transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.tt:hover .tttext {
   visibility: visible;
 }
 
