@@ -15,7 +15,7 @@
         </span></u></span>
     </p>
 
-    <button>Let's get started!</button>
+    <button type="button" id="btn"><p class="red">Let's&nbsp;</p><p class="yellow">get&nbsp;</p><p class="blue">started!</p></button>
   </div>
 </template>
 
@@ -31,6 +31,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 90vh;
 }
 
 #motto {
@@ -46,7 +47,8 @@ export default {
   border: 1vw solid #000000;
   border-radius: 46px;
   padding: 75px 200px;
-  margin: 5vh;
+  margin: 5vh 0vw;
+  max-width: fit-content;
   inline-size: min-content;
   overflow-wrap: break-word;
 }
@@ -78,6 +80,22 @@ export default {
   cursor: pointer;
 }
 
+#btn {
+  background-color: black;
+  margin: 100px 0vw 0vw 0vw;
+  display: flex;
+  padding: 10px;
+  border-radius: 46px;
+  height: 178px;
+  align-items: center;
+  border: transparent
+}
+
+#btn p {
+  margin: 0;
+  font-size: 55px;
+}
+
 /* tooltip CSS gotten from w3schools*/
 .tt {
   position: relative;
@@ -88,6 +106,7 @@ export default {
   font-size: 15px;
   visibility: hidden;
   width: 550px;
+  max-width: 100vw;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -96,8 +115,7 @@ export default {
   position: absolute;
   z-index: 1;
   top: 100%;
-  left: 0%;
-  margin-left: -100px;
+  transform: translate(-75%, 0);
 }
 
 .tt .tttext::after {
@@ -127,5 +145,24 @@ export default {
   #motto-container {
     padding: 10vh 5vw;
   }
+  
+  #btn {
+    max-height: 70px;
+  }
+
+  #btn p {
+    font-size: 35px;
+  }
 }
+
+@media screen and (max-width: 500px) {
+  #motto, #text, p {
+    font-size: 30px;
+  }
+
+  #btn p {
+    font-size: 25px;
+  }
+}
+
 </style>
