@@ -40,12 +40,13 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 nav {
   padding: 15px;
   background-color: rgba(248, 185, 42, 1);
-  width: 100%;
+  width: 100vw;
   min-height: 70px;
 }
 
