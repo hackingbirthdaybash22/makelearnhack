@@ -34,7 +34,7 @@ export default {
 }
 
 #motto {
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 75px;
@@ -45,9 +45,10 @@ export default {
 #motto-container {
   border: 1vw solid #000000;
   border-radius: 46px;
-  padding: 0px 200px;
+  padding: 75px 200px;
   margin: 5vh;
-  max-width: 60vw;
+  inline-size: min-content;
+  overflow-wrap: break-word;
 }
 
 .red {
@@ -122,5 +123,9 @@ export default {
   #text {
     flex-direction: column;
   }
-} 
+
+  #motto-container {
+    padding: 10vh 5vw;
+  }
+}
 </style>
