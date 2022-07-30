@@ -120,3 +120,13 @@ export default {
   visibility: visible;
 }
 
+@media screen and (max-width: 920px) {
+  #motto, #text, p {
+    font-size: 50px;
+  }
+
+  #text {
+    flex-direction: column;
+  }
+} 
+</style>
