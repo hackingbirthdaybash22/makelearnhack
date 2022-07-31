@@ -3,7 +3,7 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">{{ sectionTitle }}</h5>
-      <p class="card-text">{{ sectionText }}</p>
+      <p class="card-text" v-html="sectionText"></p>
       <a
         v-if="sectionBadge != '' && !currentBadges.includes(sectionBadge)"
         @click="itemSaved"
@@ -58,6 +58,8 @@ export default {
         !this.currentBadges.includes("soloBadge")
       ) {
         this.$emit("itemSaved", this.sectionBadge);
+      } else {
+        alert("You cannot collect both the solo and team badge!")
       }
     },
   },

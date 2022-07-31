@@ -1,33 +1,34 @@
 <template>
   <h1>Simple Pipeline</h1>
-  <p>This is a simple pipeline to get you through your first Hackathon!</p>
+  <p>
+    This is a simple pipeline to guide you through your first Hackathon! Collect
+    badges and learn the simple steps to completing your first hackathon
+  </p>
 
-  <nav aria-label="">
-    <ul class="pagination d-flex justify-content-center flex-row">
-      <li
-        v-if="currentStep != 1"
-        class="page-item page-link"
-        @click="currentStep--"
-      >
-        <span aria-hidden="true">&laquo;</span>
-      </li>
-      <li class="page-item page-link" @click="currentStep = 1">1</li>
-      <li class="page-item page-link" @click="currentStep = 2">2</li>
-      <li class="page-item page-link" @click="currentStep = 3">3</li>
-      <li class="page-item page-link" @click="currentStep = 4">4</li>
-      <li class="page-item page-link" @click="currentStep = 5">5</li>
-      <li class="page-item page-link" @click="currentStep = 6">6</li>
-      <li class="page-item page-link" @click="currentStep = 7">7</li>
-      <li class="page-item page-link" @click="currentStep = 8">8</li>
-      <li
-        v-if="currentStep != 8"
-        class="page-item page-link"
-        @click="currentStep++"
-      >
-        <span aria-hidden="true">&raquo;</span>
-      </li>
-    </ul>
-  </nav>
+  <ul class="pagination d-flex justify-content-center flex-row">
+    <li
+      v-if="currentStep != 1"
+      class="page-item page-link"
+      @click="currentStep--"
+    >
+      <span aria-hidden="true">&laquo;</span>
+    </li>
+    <li class="page-item page-link" @click="currentStep = 1">1</li>
+    <li class="page-item page-link" @click="currentStep = 2">2</li>
+    <li class="page-item page-link" @click="currentStep = 3">3</li>
+    <li class="page-item page-link" @click="currentStep = 4">4</li>
+    <li class="page-item page-link" @click="currentStep = 5">5</li>
+    <li class="page-item page-link" @click="currentStep = 6">6</li>
+    <li class="page-item page-link" @click="currentStep = 7">7</li>
+    <li class="page-item page-link" @click="currentStep = 8">8</li>
+    <li
+      v-if="currentStep != 8"
+      class="page-item page-link"
+      @click="currentStep++"
+    >
+      <span aria-hidden="true">&raquo;</span>
+    </li>
+  </ul>
 
   <div class="row mb-3">
     <div class="col-md-4 sidebar">
@@ -36,19 +37,27 @@
         :currentBadges="currentBadges"
       />
     </div>
-    <div class="col-md-8 row">
-      <div
-        class="col-md-6 g-4"
-        v-for="step in stepsData[currentStep - 1].stepCards"
-        :key="step.cardTitle"
-      >
-        <InfoBlock
-          :sectionTitle="step.cardTitle"
-          :sectionText="step.cardText"
-          :sectionBadge="step.cardItem"
-          :currentBadges="currentBadges"
-          @itemSaved="updateItems($event)"
-        />
+    <div class="col-md-8 column">
+      <div class="row">
+        <h5>Step {{ currentStep }}</h5>
+        <p>
+          {{ stepsData[currentStep - 1].stepTitle }}
+        </p>
+      </div>
+      <div class="row">
+        <div
+          class="col-md-6 g-4"
+          v-for="step in stepsData[currentStep - 1].stepCards"
+          :key="step.cardTitle"
+        >
+          <InfoBlock
+            :sectionTitle="step.cardTitle"
+            :sectionText="step.cardText"
+            :sectionBadge="step.cardItem"
+            :currentBadges="currentBadges"
+            @itemSaved="updateItems($event)"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -107,19 +116,20 @@ const stepsData = [
         cardSize: 1,
       },
       {
-        cardTitle: "Cons of working in teams",
-        cardText:
-          "Working in teams can be tricky especially if you are unfamiliar with your teammates, and communication or scheduling issues might interrupt your progress.",
-        cardItem: "",
-        cardSize: 1,
-      },
-      {
         cardTitle: "Cons of working solo",
         cardText:
           "Working alone means you have to figure things out on your own, and you have to be careful to not overplan your hack.",
         cardItem: "",
         cardSize: 1,
       },
+      {
+        cardTitle: "Cons of working in teams",
+        cardText:
+          "Working in teams can be tricky especially if you are unfamiliar with your teammates, and communication or scheduling issues might interrupt your progress.",
+        cardItem: "",
+        cardSize: 1,
+      },
+      
     ],
   },
   {
@@ -129,7 +139,7 @@ const stepsData = [
       {
         cardTitle: "What is an ideation template",
         cardText:
-          "An ideation template is a framework for you to plan your hack. Our template is one we made as a quick start after over 40 hackathons cumulative experience between us, refined over the many hackathons.",
+          "An ideation template is a framework for you to plan your hack. Our template is one we made as a quick start after over 40 hackathons cumulative experience between us, refined over the many hackathons. Check out our template here: <a href='https://docs.google.com/document/d/10DVAemBxJiMuTWgauTRXdxm9gvnxsSg4jlca2h-8CdY/edit#heading=h.h5kznaebdxa'>Ideation Template</a>",
         cardItem: "templateBadge",
         cardSize: 2,
       },
@@ -183,7 +193,7 @@ const stepsData = [
       {
         cardTitle: "Spin the wheel",
         cardText:
-          "Sometimes when we cannot make a decision, or are taking more than a couple hours on ideation, we end up using the spin the wheel method to select our final idea.",
+          "Sometimes when we cannot make a decision, or are taking more than a couple hours on ideation, we end up using the <a href='https://wheelofnames.com/'>Spin the wheel</a> method to select our final idea.",
         cardItem: "",
         cardSize: 1,
       },
@@ -210,7 +220,7 @@ const stepsData = [
       {
         cardTitle: "Tasks management in teams",
         cardText:
-          "Distributing the tasks and playing to your team members strengths is key. Using task management like Github's Projects boards can be useful to track progress and ensure everyone is on task.",
+          "Distributing the tasks and playing to your team members strengths is key. Using task management like <a href='https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects'>Github Projects boards</a> can be useful to track progress and ensure everyone is on task.",
         cardItem: "",
         cardSize: 2,
       },
@@ -223,28 +233,28 @@ const stepsData = [
       {
         cardTitle: "Setting up and organization",
         cardText:
-          "Typically, we have found that keeping hackathon repositories in Github organizations helps to keep things neat, especially if you plan to do many hackathons in the long run.",
+          "Typically, we have found that keeping hackathon repositories in <a href='https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations>Github organizations</a> helps to keep things neat, especially if you plan to do many hackathons in the long run.",
         cardItem: "",
         cardSize: 1,
       },
       {
         cardTitle: "Setting up a repository",
         cardText:
-          "Set up a repository to save your work. Github is an incredible version control tool to help you keep track of your work. You can use Github to share your work with the community, and to collaborate with other hackers.",
+          "Set up a <a href='https://docs.github.com/en/get-started/quickstart/create-a-repo'>repository</a> to save your work. Github is an incredible version control tool to help you keep track of your work. You can use Github to share your work with the community, and to collaborate with other hackers.",
         cardItem: "githubBadge",
         cardSize: 1,
       },
       {
         cardTitle: "Github Pages",
         cardText:
-          "Github pages is a great way to set up user guides, documentation, or even host your project!",
+          "<a href='https://pages.github.com/'>Github pages</a> is a great way to set up user guides, documentation, or even host your project!",
         cardItem: "",
         cardSize: 1,
       },
       {
         cardTitle: "Github Projects",
         cardText:
-          "Github Projects is an excellent task managemetn system to help you plan your time and prioritize your tasks, especially working in groups!",
+          "<a href='https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects'>Github Projects</a> is an excellent task managemetn system to help you plan your time and prioritize your tasks, especially working in groups!",
         cardItem: "",
         cardSize: 1,
       },
@@ -252,12 +262,12 @@ const stepsData = [
   },
   {
     stepNum: 7,
-    stepTitle: "Coding and Deploymeny",
+    stepTitle: "Coding and Deployment",
     stepCards: [
       {
         cardTitle: "Editors IDE",
         cardText:
-          "We like to use Visual Studio code, a simple editor easy for beginners to use.",
+          "We like to use <a href='https://code.visualstudio.com/'>Visual Studio code</a>, a simple editor easy for beginners to use.",
         cardItem: "codingBadge",
         cardSize: 1,
       },
@@ -271,7 +281,7 @@ const stepsData = [
       {
         cardTitle: "Online editors",
         cardText:
-          "If you don't want to download an editor environment for your first hack, there are also online options like Replit and codesandbox to build your project.",
+          "If you don't want to download an editor environment for your first hack, there are also online options like <a href='https://replit.com/'>Replit</a> and <a href='https://codesandbox.io/'>codesandbox</a> to build your project.",
         cardItem: "",
         cardSize: 1,
       },
@@ -291,7 +301,7 @@ const stepsData = [
       {
         cardTitle: "Add images and emojis",
         cardText:
-          "Spice up your write up with Emojis and fun Github Markdown formatting to draw attention to the most important sections! You can check out our devpost write-up for inspiration!",
+          "Spice up your write up with Emojis and fun <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>Github Markdown</a> formatting to draw attention to the most important sections! You can check out our devpost write-up for inspiration!",
         cardItem: "",
         cardSize: 1,
       },
@@ -305,7 +315,7 @@ const stepsData = [
       {
         cardTitle: "Video recording software",
         cardText:
-          "If you've never recorded a demo before, fret not! There's plenty of free software for recording and editing. Our favourites are Obs for screen recording, and windows video editor for easy editing!",
+          "If you've never recorded a demo before, fret not! There's plenty of free software for recording and editing. Our favourites are <a href='https://obsproject.com/'>OBS</a> for screen recording, and <a href='https://www.howtogeek.com/355524/how-to-use-windows-10s-hidden-video-editor/'>windows video editor</a> for easy editing!",
         cardItem: "",
         cardSize: 1,
       },
