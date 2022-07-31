@@ -1,4 +1,6 @@
 <template>
+  <back-to-demo></back-to-demo>
+
   <body class="body" id="body">
     <div id="app">
       <a id="url-setting" v-bind:href="url">click here for code</a>
@@ -16,12 +18,16 @@
   </body>
 </template>
 <script>
+import BackToDemo from "@/components/BackToDemo";
 export default {
   name: "HappyBirthday",
   data() {
     return {
       url: "https://github.com/hackingbirthdaybash22/makelearnhack/tree/siewwen-demo/demo-happy-birthday",
     };
+  },
+  components: {
+    BackToDemo,
   },
   methods: {},
 };

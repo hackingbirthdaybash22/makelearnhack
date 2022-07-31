@@ -1,5 +1,7 @@
 <template>
+  <back-to-demo></back-to-demo>
   <div id="app">
+    <back-to-demo></back-to-demo>
     <a id="url-setting" v-bind:href="url">click here for code</a>
     <br /><br />
     <p id="text" class="example" :style="`font-size: ${fontSize}px`">
@@ -20,6 +22,7 @@
   </div>
 </template>
 <script>
+import BackToDemo from "@/components/BackToDemo";
 export default {
   name: "GettingStarted",
   data() {
@@ -29,6 +32,9 @@ export default {
     };
   },
   methods: {},
+  components: {
+    BackToDemo,
+  },
 };
 </script>
 <style scoped>

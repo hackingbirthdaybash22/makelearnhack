@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <back-to-demo></back-to-demo>
     <a id="url-setting" v-bind:href="url">click here for code</a>
 
     <div v-if="oldWindow">
@@ -64,6 +65,7 @@
   </div>
 </template>
 <script>
+import BackToDemo from "@/components/BackToDemo";
 export default {
   name: "Card",
   data() {
@@ -86,6 +88,7 @@ export default {
       this.oldWindow = false;
     },
   },
+  components: { BackToDemo },
 };
 </script>
 <style>
