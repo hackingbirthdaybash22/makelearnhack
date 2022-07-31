@@ -58,7 +58,7 @@ To run this
 
 <br>
 
-### ```demo-card``` folder
+### ```demo-game``` folder
 - This folder contains a mini interactive game to introduce the various mouse events.
 
 To run this
