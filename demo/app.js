@@ -22,7 +22,7 @@ const app = Vue.createApp({
                 { title: 'the way of kings', author: 'brandon sanderson' },
                 { title: 'the final empire', author: 'brandon sanderson' },
             ],
-            url: 'https://www.thenetninja.co.uk',
+            url: 'https://github.com/hackingbirthdaybash22/makelearnhack/tree/siewwen-demo/demo',
         }
     },
     methods: {

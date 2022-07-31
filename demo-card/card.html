@@ -7,12 +7,14 @@
     <title>Wishing Card</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <style>
+        #url-setting {
+            font-size: 25px;
+        }
         #body {
             background-color: peachpuff;
         }
         .h1 {
             text-align: center;
-            padding-top: 1%;
             font-size: 45px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
@@ -89,6 +91,8 @@
 
 <body id="body">
     <div id="app">
+        <a id="url-setting" v-bind:href="url">click here for code</a>
+
         <div v-if="oldWindow">
         <h1 class="h1">Let's create a wishing card!</h1>
     

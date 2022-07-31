@@ -27,12 +27,20 @@
         background-attachment: fixed;
         background-size: cover;
       }
+      #url-setting {
+        font-size: 25px;
+      }
     </style>
   </head>
 
   <body class="body" id="body">
-    <div class="info" id="info">Happy Birthday MLH!</div>
+    <div id="app">
+      <a id="url-setting" v-bind:href="url">click here for code</a>
 
-    <audio src="assets/hbd_sound.mp3" id="music" preload="auto" autoplay="true" loop="true"></audio>
+      <div class="info" id="info">Happy Birthday MLH!</div>
+
+      <audio src="assets/hbd_sound.mp3" id="music" preload="auto" autoplay="true" loop="true"></audio>
+    </div>
+    <script src="hbd.js"></script>
   </body>
 </html>

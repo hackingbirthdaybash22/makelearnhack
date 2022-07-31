@@ -7,6 +7,7 @@ const app = Vue.createApp({
             honorific: "",
             newWindow: false,
             oldWindow: true,
+            url: 'https://github.com/hackingbirthdaybash22/makelearnhack/tree/siewwen-demo/demo-card'
         }
     },
     methods: {
