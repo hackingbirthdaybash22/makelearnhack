@@ -2,32 +2,30 @@
   <h1>Simple Pipeline</h1>
   <p>This is a simple pipeline to get you through your first Hackathon!</p>
 
-  <nav aria-label="">
-    <ul class="pagination d-flex justify-content-center flex-row">
-      <li
-        v-if="currentStep != 1"
-        class="page-item page-link"
-        @click="currentStep--"
-      >
-        <span aria-hidden="true">&laquo;</span>
-      </li>
-      <li class="page-item page-link" @click="currentStep = 1">1</li>
-      <li class="page-item page-link" @click="currentStep = 2">2</li>
-      <li class="page-item page-link" @click="currentStep = 3">3</li>
-      <li class="page-item page-link" @click="currentStep = 4">4</li>
-      <li class="page-item page-link" @click="currentStep = 5">5</li>
-      <li class="page-item page-link" @click="currentStep = 6">6</li>
-      <li class="page-item page-link" @click="currentStep = 7">7</li>
-      <li class="page-item page-link" @click="currentStep = 8">8</li>
-      <li
-        v-if="currentStep != 8"
-        class="page-item page-link"
-        @click="currentStep++"
-      >
-        <span aria-hidden="true">&raquo;</span>
-      </li>
-    </ul>
-  </nav>
+  <ul class="pagination d-flex justify-content-center flex-row">
+    <li
+      v-if="currentStep != 1"
+      class="page-item page-link"
+      @click="currentStep--"
+    >
+      <span aria-hidden="true">&laquo;</span>
+    </li>
+    <li class="page-item page-link" @click="currentStep = 1">1</li>
+    <li class="page-item page-link" @click="currentStep = 2">2</li>
+    <li class="page-item page-link" @click="currentStep = 3">3</li>
+    <li class="page-item page-link" @click="currentStep = 4">4</li>
+    <li class="page-item page-link" @click="currentStep = 5">5</li>
+    <li class="page-item page-link" @click="currentStep = 6">6</li>
+    <li class="page-item page-link" @click="currentStep = 7">7</li>
+    <li class="page-item page-link" @click="currentStep = 8">8</li>
+    <li
+      v-if="currentStep != 8"
+      class="page-item page-link"
+      @click="currentStep++"
+    >
+      <span aria-hidden="true">&raquo;</span>
+    </li>
+  </ul>
 
   <div class="row mb-3">
     <div class="col-md-4 sidebar">
