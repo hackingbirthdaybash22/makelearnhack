@@ -39,7 +39,7 @@
         "id": 7,
         "category": "Skills",
         "question": "What are the skills and competencies of a good hacker?",
-        "answer": "Top 3 skills: <br/><ul><li>Perseverance</li><li>Willingness to learn</li><li>Patience</li></ul>"
+        "answer": "Top 3 skills: <br/><ul style='text-align: left'><li>Perseverance</li><li>Willingness to learn</li><li>Patience</li></ul>"
     }, 
     {
         "id": 8,
@@ -57,7 +57,7 @@
         "id": 10,
         "category": "Skills",
         "question": "What is good hacker etiquette?",
-        "answer": "Basic rules would be: <br/><ul><li>No cheating.</li><li>No copying.</li></ul>"
+        "answer": "Basic rules would be: <br/><ul style='text-align: left'><li>No cheating.</li><li>No copying.</li></ul>"
     }, 
     {
         "id": 11,
@@ -87,7 +87,7 @@
         "id": 15,
         "category": "About",
         "question": "How has our hacking journey been so far?",
-        "answer": "<ul><li>Learning new tech through hands-on experience building tech with each and every one</li><li>Going from knowing the bare bones of what the school teach us to taking our learning into our own hands</li><li>Trying again and again no matter how many times we fail / don't win / are disappointed with the results/li><li>Trying to learn new tech every week/ make sure our brain doesn’t rot before school starts… </li><li>Having fun and making friends along the way</li></ul>"
+        "answer": "<ul style='text-align: left'><li>Learning new tech through hands-on experience building tech with each and every one</li><li>Going from knowing the bare bones of what the school teach us to taking our learning into our own hands</li><li>Trying again and again no matter how many times we fail / don't win / are disappointed with the results/li><li>Trying to learn new tech every week/ make sure our brain doesn’t rot before school starts… </li><li>Having fun and making friends along the way</li></ul>"
     },
     {
         "id": 16,
