@@ -4,7 +4,12 @@
     <div class="card-body">
       <h5 class="card-title">{{ sectionTitle }}</h5>
       <p class="card-text">{{ sectionText }}</p>
-      <a href="#" class="btn btn-primary">Save Item</a>
+      <a
+        v-if="sectionBadge != '' && !currentBadges.includes(sectionBadge)"
+        @click="itemSaved"
+        class="btn btn-danger"
+        >Save Item</a
+      >
     </div>
   </div>
 </template>
@@ -21,17 +26,39 @@ export default {
       type: String,
       default: "Section Text Default",
     },
+    sectionBadge: {
+      type: String,
+      default: "",
+    },
+    currentBadges: {
+      type: Array,
+      default: () => [],
+    },
   },
   data() {
     return {
       sectionSelected: false,
     };
   },
-  computed: {},
+  emits: ["itemSaved"],
   methods: {
-    sectionClicked() {
-      this.sectionSelected = !this.sectionSelected;
-      console.log("Section clicked", this.sectionTitle, this.sectionSelected);
+    itemSaved() {
+      if (
+        this.sectionBadge != "soloBadge" &&
+        this.sectionBadge != "teamBadge"
+      ) {
+        this.$emit("itemSaved", this.sectionBadge);
+      } else if (
+        this.sectionBadge == "soloBadge" &&
+        !this.currentBadges.includes("teamBadge")
+      ) {
+        this.$emit("itemSaved", this.sectionBadge);
+      } else if (
+        this.sectionBadge == "teamBadge" &&
+        !this.currentBadges.includes("soloBadge")
+      ) {
+        this.$emit("itemSaved", this.sectionBadge);
+      }
     },
   },
 };

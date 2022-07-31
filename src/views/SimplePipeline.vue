@@ -31,7 +31,10 @@
 
   <div class="row mb-3">
     <div class="col-md-4 sidebar">
-      <PipelineProgress :progressValue="currentStep" />
+      <PipelineProgress
+        :progressValue="currentStep"
+        :currentBadges="currentBadges"
+      />
     </div>
     <div class="col-md-8 row">
       <div
@@ -42,6 +45,9 @@
         <InfoBlock
           :sectionTitle="step.cardTitle"
           :sectionText="step.cardText"
+          :sectionBadge="step.cardItem"
+          :currentBadges="currentBadges"
+          @itemSaved="updateItems($event)"
         />
       </div>
     </div>
@@ -259,7 +265,7 @@ const stepsData = [
         cardTitle: "Learning to Google",
         cardText:
           "At the heart of hacking is asking questions. Questions about what we can build, how we can build it, and how we can make it better. Learning to Google, or in otherwords learning to ask questions, is an invaluable skill for hackathons and beyond",
-        cardItem: "githubBadge",
+        cardItem: "",
         cardSize: 1,
       },
       {
@@ -293,7 +299,7 @@ const stepsData = [
         cardTitle: "Record a video",
         cardText:
           "While not all hackathons require a demo video submission, we highly reccomend it! As the software changes and evolves, some older projects may stop worknig after a while. A demo video serves as a record of how your hack was intended to work when you developed it. Do upload your videos early before the deadline!",
-        cardItem: "demoVideoBadge",
+        cardItem: "demoBadge",
         cardSize: 1,
       },
       {
@@ -320,13 +326,21 @@ export default {
     PipelineProgress,
     InfoBlock,
   },
-  mounted() {},
+  methods: {
+    updateItems(x) {
+      if (!this.currentBadges.includes(x)) {
+        this.currentBadges.push(x);
+      }
+      console.log(this.currentBadges);
+    },
+  },
 
   data() {
     return {
       stepsData: stepsData,
       sectionTitle: "Hackathon Info",
       currentStep: 1,
+      currentBadges: [],
     };
   },
 };

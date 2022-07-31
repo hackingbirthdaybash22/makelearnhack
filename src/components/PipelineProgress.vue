@@ -12,14 +12,35 @@
         aria-valuemax="8"
       ></div>
     </div>
-    <p>This section holds your progress and inventory information.</p>
     <p>
-      You can add items to your inventory by clicking on the "Save Item" button.
+      This section holds your progress and inventory information. You can add
+      items to your inventory by clicking on the
+      <strong>"Save Item"</strong> button.
     </p>
+
+    <hr />
+
+    <div class="row">
+      <h5>Inventory</h5>
+      <p>
+        You have <strong>{{ currentBadges.length }}</strong
+        >/7 badges in your inventory.
+      </p>
+      <div class="row">
+        <div class="badge-container col-md-2 m-1" v-for="badge in currentBadges" :key="badge" :title="badge">
+          <img
+            class="img-fluid"
+            :src='require(`../assets/` + badge + `.png`)'
+            :alt="badge"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "PipelineProgress",
   components: {},
@@ -28,6 +49,10 @@ export default {
       type: Number,
       default: 1,
     },
+    currentBadges: {
+      type: Array,
+      default: () => [],
+    },
   },
   computed: {
     progress() {
@@ -35,8 +60,8 @@ export default {
     },
   },
   methods: {
-    completeStep(step) {
-      step.status = "completed";
+    imgSrc(badge) {
+      return "./assets/" + badge + ".png";
     },
   },
 };
@@ -50,5 +75,17 @@ export default {
   border-radius: 5px;
   margin: 20px;
   width: calc(100% - 20px);
+}
+
+.badge-container {
+  font-size: 12px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  color: black;
+}
+
+img {
+  width: 100%;
 }
 </style>
