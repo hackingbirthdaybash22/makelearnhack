@@ -60,19 +60,29 @@
             font-size: 25px;
             padding: 5px;
         }
-        #new-window {
+        #info {
             background-color: skyblue;
 
-        font-size: 125px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 125px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-        width: 100%;
-        height: 25%;
+            width: 100%;
+            height: 15%;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #new-window {
+            background-image: url("assets/balloons.jpg");
+            background-position: center 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+            height: 100%;
+            width: 100%;
         }
     </style>
 </head>
@@ -121,8 +131,12 @@
         </div>
 
         <div v-if="newWindow" id="new-window">
-            <h1>Hello {{ honorific }} {{ name }} </h1>
-            <h1>{{ message }}</h1>
+            <h1 id="info">
+                {{ honorific }} {{ name }},
+                {{ message }}
+            </h1>
+
+            <audio src="assets/party.mp3" id="music" preload="auto" autoplay="true" loop="true"></audio>
         </div>
     </div>
     <script src="card.js"></script>
