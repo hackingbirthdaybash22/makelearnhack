@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "category": "General",
+        "question": "What is a hackathon?",
+        "answer": "A hackathon is an event organized by a company for tech enthusiasts putting up hardware or software-related challenges to be solved over a fixed time duration, generally two days or more."
+    },
+    {
+        "id": 2,
+        "category": "General",
+        "question": "How do new hackers join a hackathon?",
+        "answer": "They can keep a lookout for hackathons on sites like <a target='_blank' href='https://devpost.com/hackathons'>Devpost</a> or <a target='_blank' href='https://mlh.io/seasons/2023/events'>MLH</a>."
+    },
+    {
+        "id": 3,
+        "category": "General",
+        "question": "What do new hackers need to know about hackathons?",
+        "answer": "Most, if not all hackathons require participants to do some form of coding... Otherwise, all you need is a laptop and a good internet connection!"
+    }, 
+    {
+        "id": 4,
+        "category": "General",
+        "question": "What is needed to complete a hackathon project?",
+        "answer": "Usually for hackathons, it would be ideal to meet and work with like-minded individuals. Together as a team, you will brainstorm for ideas for the hackathon. It is of utmost importance that you persevere and work together to complete the project. It is also totally fine to work on your own, just know that it may be quite daunting to complete a whole project by yourself within the limited time. You will usually also be expected to present your project at the end of the hackathon, possibly in the form of a demo video."
+    }, 
+    {
+        "id": 5,
+        "category": "General",
+        "question": "What is important about building proper hacks for hackathons?",
+        "answer": "It is totally alright to not win anything. The most important thing about hacking is to learn new things. You can always try your luck in another hackathon!"
+    },
+    {
+        "id": 6,
+        "category": "General",
+        "question": "Who is eligible to join hackathons?",
+        "answer": "Most of the time, hackathons are open to public, meaning both students and even working adults can join! Do remember to read the guidelines of the hackathon you are intending to join."
+    },
+    {
+        "id": 7,
+        "category": "Skills",
+        "question": "What are the skills and competencies of a good hacker?",
+        "answer": "Top 3 skills: <br/><ul style='text-align: left'><li>Perseverance</li><li>Willingness to learn</li><li>Patience</li></ul>"
+    }, 
+    {
+        "id": 8,
+        "category": "Skills",
+        "question": "What is the quickest way to start hacking and learning how to hack?",
+        "answer": "The simple answer is to 'just try'! Apart from that, you can find lots of free resources on YouTube, medium, Google, etc. to help you out! It would be even better if you could follow the tutorials and get some hands-on experience."
+    },
+    {
+        "id": 9,
+        "category": "Skills",
+        "question": "What will I get out of hacking? How will hacking benefit me?",
+        "answer": "Even without a computing background, joining a hackathon and making something shows your willingness/ initiative to learn. Many soft skills gained during a hackathon are transferable: perseverance, communication, teamwork. You will also get the joy of creating something new and <u>UNIQUELY YOURS</u>."
+    },
+    {
+        "id": 10,
+        "category": "Skills",
+        "question": "What is good hacker etiquette?",
+        "answer": "Basic rules would be: <br/><ul style='text-align: left'><li>No cheating.</li><li>No copying.</li></ul>"
+    }, 
+    {
+        "id": 11,
+        "category": "Skills",
+        "question": "What are some common tools for (remote) collaboration that would be good to learn?",
+        "answer": "Google drive would be good, sharing a Google drive folder to collate project assets and even just google docs for brainstorming is a good start! For cod collaboration, you can use <a target='_blank' href='https://github.com'>GitHub</a> or <a target='_blank' href='https://gitlab.com'>GitLab</a>. Git is a popular version control tool for collaborating on code, that is used even by professionals in the industry. It is very useful because it allows for remote collaboration and there are many other tools on Github that are very useful! <br/> P.S. We used GitHub for this project!"
+    },
+    {
+        "id": 12,
+        "category": "About",
+        "question": "Who is this website for?",
+        "answer": "This website is a guide for hackers, especially newbies to hackathons."
+    }, 
+    {
+        "id": 13,
+        "category": "About",
+        "question": "What is this website for?",
+        "answer": "It is meant to hand-hold newbie hackers through a hackathon and to get some hands-on experience with the tools and techniques that would be needed to make a successful hackathon project."
+    },
+    {
+        "id": 14,
+        "category": "About",
+        "question": "What made us (yes, us! the creators of this website) start hacking?",
+        "answer": "We wanted to make good use of our summer break to learn new skills and be productive. So far, it has been fruitful and we have built our tech stack, which has in turn improved our resume!"
+    }, 
+    {
+        "id": 15,
+        "category": "About",
+        "question": "How has our hacking journey been so far?",
+        "answer": "<ul style='text-align: left'><li>Learning new tech through hands-on experience building tech with each and every one</li><li>Going from knowing the bare bones of what the school teach us to taking our learning into our own hands</li><li>Trying again and again no matter how many times we fail / don't win / are disappointed with the results/li><li>Trying to learn new tech every week/ make sure our brain doesn’t rot before school starts… </li><li>Having fun and making friends along the way</li></ul>"
+    },
+    {
+        "id": 16,
+        "category": "About",
+        "question": "How was this website built?",
+        "answer": "We made use of Google Drive/Docs for brainstorming, Figma for wireframing and planning out the pages, and GitHub for code collaboration. We also used a lot of free resources on YouTube, Medium, W3schools to help us out! <br/> We made use of the VueJS framework and the Bootstrap framework for the frontend. The co:here API is used on this page! "
+    }
+]
