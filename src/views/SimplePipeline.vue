@@ -139,7 +139,7 @@ const stepsData = [
       {
         cardTitle: "What is an ideation template",
         cardText:
-          "An ideation template is a framework for you to plan your hack. Our template is one we made as a quick start after over 40 hackathons cumulative experience between us, refined over the many hackathons.",
+          "An ideation template is a framework for you to plan your hack. Our template is one we made as a quick start after over 40 hackathons cumulative experience between us, refined over the many hackathons. Check out our template here: <a href='https://docs.google.com/document/d/10DVAemBxJiMuTWgauTRXdxm9gvnxsSg4jlca2h-8CdY/edit#heading=h.h5kznaebdxa'>Ideation Template</a>",
         cardItem: "templateBadge",
         cardSize: 2,
       },
