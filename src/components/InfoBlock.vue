@@ -1,8 +1,15 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
-  <h3>{{ sectionTitle }}</h3>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ sectionTitle }}</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
 
-  <p>lorem ipsum dolor sit amet</p>
 </template>
 
 <script>
