@@ -1,0 +1,94 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Demo</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+      .box {
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background: #ddd;
+        margin: 20px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Learning Vue :)</h1>
+
+    <div id="app">
+      <a v-bind:href="url">click here for code</a>
+
+      <!-- {{ X }} is a dynamic changeable value -->
+      <p>{{ title }} {{ person }} {{ expression }}</p>
+
+      <!-- age changes depending on button clicked -->
+      <p>I am {{ age }} year old.</p>
+      <button v-on:click="age++">Increase age</button>
+      <button v-on:click="age--">Decrease age</button>
+
+      <!-- a changeable change -->
+      <p>{{ change }}</p>
+      <div @click="change = 'Changed'">Click Me!</div>
+      <div @click="changeMe">Or Me!</div>
+      <div @click="changeMeToo('Changed!!')">Or Me!</div>
+
+      <!-- if statement -->
+      <div v-if="showStatement">
+        <p>{{ statement }}</p>
+      </div>
+      <button @click="hideShowStatement">
+        <span>Hide Statement</span>
+      </button>
+      <button @click="displayShowStatement">
+        <span>Display Statement</span>
+      </button>
+
+      <!-- another way to implement if statement -->
+      <div v-if="showStatement">
+        <p>{{ statement }}</p>
+      </div>
+      <button @click="toggleShowStatement">
+        <span v-if="showStatement">Hide Statement</span>
+        <span v-if="!showStatement">Show Statement</span>
+        <!-- OR
+                <span v-else>Show Statement</span>
+            -->
+      </button>
+
+      <!-- implementation of vshow -->
+      <div v-show="showStatement">currently showing statement</div>
+
+      <br />
+
+      <!-- mouse event -->
+      <p>I am {{ age }} year old.</p>
+      <div class="box" @mouseover="age++">mouseover</div>
+      <div class="box" @mouseleave="age--">mouseleave</div>
+      <div class="box" @dblclick="handleEvent">double click</div>
+      <div class="box" @mousemove="handleMouseMove">
+        position {{ x }} {{ y }}
+      </div>
+
+      <!-- for statement -->
+      <ul>
+        <li v-for="book in books">
+          <h3>{{ book.title }}</h3>
+          <p>{{ book.author }}</p>
+        </li>
+      </ul>
+
+      <!-- attribute binding -->
+      <a v-bind:href="url">Best website ever!</a>
+      <!-- OR
+            <a :href="url">Best website ever!</a>
+            -->
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
