@@ -9,7 +9,7 @@
         "id": 2,
         "category": "General",
         "question": "How do new hackers join a hackathon?",
-        "answer": "They can keep a lookout for hackathons on sites like <a href='https://devpost.com/hackathons'>Devpost</a> or <a href='https://mlh.io/seasons/2023/events'>MLH</a>."
+        "answer": "They can keep a lookout for hackathons on sites like <a target='_blank' href='https://devpost.com/hackathons'>Devpost</a> or <a target='_blank' href='https://mlh.io/seasons/2023/events'>MLH</a>."
     },
     {
         "id": 3,
@@ -39,7 +39,7 @@
         "id": 7,
         "category": "Skills",
         "question": "What are the skills and competencies of a good hacker?",
-        "answer": "Top 3 skills: <ul><li>Perseverance</li><li>Willingness to learn</li><li>Patience</li></ul>"
+        "answer": "Top 3 skills: <br/><ul><li>Perseverance</li><li>Willingness to learn</li><li>Patience</li></ul>"
     }, 
     {
         "id": 8,
@@ -57,13 +57,13 @@
         "id": 10,
         "category": "Skills",
         "question": "What is good hacker etiquette?",
-        "answer": "Basic rules would be: <br/><ul><li>No cheating.</li><li></li>No copying.</ul>"
+        "answer": "Basic rules would be: <br/><ul><li>No cheating.</li><li>No copying.</li></ul>"
     }, 
     {
         "id": 11,
         "category": "Skills",
         "question": "What are some common tools for (remote) collaboration that would be good to learn?",
-        "answer": "Google drive would be good, sharing a Google drive folder to collate project assets and even just google docs for brainstorming is a good start! For cod collaboration, you can use <a href='https://github.com'>GitHub</a> or <a href='https://gitlab.com'>GitLab</a>. Git is a popular version control tool for collaborating on code, that is used even by professionals in the industry. It is very useful because it allows for remote collaboration and there are many other tools on Github that are very useful! <br/> P.S. We used GitHub for this project!"
+        "answer": "Google drive would be good, sharing a Google drive folder to collate project assets and even just google docs for brainstorming is a good start! For cod collaboration, you can use <a target='_blank' href='https://github.com'>GitHub</a> or <a target='_blank' href='https://gitlab.com'>GitLab</a>. Git is a popular version control tool for collaborating on code, that is used even by professionals in the industry. It is very useful because it allows for remote collaboration and there are many other tools on Github that are very useful! <br/> P.S. We used GitHub for this project!"
     },
     {
         "id": 12,
@@ -87,7 +87,7 @@
         "id": 15,
         "category": "About",
         "question": "How has our hacking journey been so far?",
-        "answer": "<ul><li>Learning new tech through hands-on experience building tech with each and every one</li><li>Going from knowing the bare bones of what the school teach us to taking our learning into our own hands</li><li>Trying again and again no matter how many times we fail / don't win / are disappointed with the results>/li><li>Trying to learn new tech every week/ make sure our brain doesn’t rot before school starts… </li><li>Having fun and making friends along the way</li></ul>"
+        "answer": "<ul><li>Learning new tech through hands-on experience building tech with each and every one</li><li>Going from knowing the bare bones of what the school teach us to taking our learning into our own hands</li><li>Trying again and again no matter how many times we fail / don't win / are disappointed with the results/li><li>Trying to learn new tech every week/ make sure our brain doesn’t rot before school starts… </li><li>Having fun and making friends along the way</li></ul>"
     },
     {
         "id": 16,
