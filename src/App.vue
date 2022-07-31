@@ -27,11 +27,8 @@
         </li>
         &emsp;
         <li class="nav-item">
-          <router-link to="guide"
-            ><i class="fa-solid fa-scroll fa-2xl"></i
-          ></router-link>
-        </li>
-        &emsp;
+          <router-link to="simplePipeline"><i class="fa-solid fa-scroll fa-2xl"></i></router-link>
+        </li>&emsp;
         <li class="nav-item">
           <router-link to="demo"
             ><i class="fa-solid fa-laptop-code fa-2xl"></i

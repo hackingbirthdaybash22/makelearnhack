@@ -4,6 +4,7 @@ import Demo from "../views/Demo.vue";
 import Card from "../views/Card.vue";
 import GettingStarted from "../views/GettingStarted.vue";
 import HappyBirthday from "../views/HappyBirthday.vue";
+import SimplePipeline from "@/views/SimplePipeline.vue";
 import Faq from "../views/Faq.vue";
 
 const routes = [
@@ -35,10 +36,15 @@ const routes = [
     component: HappyBirthday,
   },
   {
+    path: "/simplepipeline",
+    name: "SimplePipeline",
+    component: SimplePipeline,
+  }, 
+  {
     path: "/faq",
     name: "FAQ",
     component: Faq,
-  },
+  }
 ];
 
 const router = createRouter({
