@@ -1,9 +1,48 @@
 <template>
   <h1>Simple Pipeline</h1>
   <p>This is a simple pipeline to get you through your first Hackathon!</p>
-  <PipelineProgress />
-  <InfoBlock :sectionTitle="sectionTitle" />
-  <InfoBlock :sectionTitle="sectionTitle" />
+  
+
+  <nav aria-label="">
+    <ul class="pagination d-flex justify-content-center flex-row">
+      <!-- <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li> -->
+      <li class="page-item page-link">1</li>
+      <li class="page-item page-link">2</li>
+      <li class="page-item page-link">3</li>
+      <li class="page-item page-link">4</li>
+      <li class="page-item page-link">5</li>
+      <li class="page-item page-link">6</li>
+      <li class="page-item page-link">7</li>
+      <li class="page-item page-link">8</li>     
+      <!-- <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li> -->
+    </ul>
+  </nav>
+
+  <div class="row mb-3">
+    <div class="col-md-4 sidebar">
+      <PipelineProgress />
+    </div>
+    <div class="col-md-8 row">
+      <div
+        class="col-md-6 g-4"
+        v-for="step in stepsData[currentStep].stepCards"
+        :key="step.cardTitle"
+      >
+        <InfoBlock
+          :sectionTitle="step.cardTitle"
+          :sectionText="step.cardText"
+        />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -278,15 +317,27 @@ export default {
     PipelineProgress,
     InfoBlock,
   },
+  mounted() {
+    console.log(stepsData[0].stepTitle);
+  },
 
   data() {
     return {
+      stepsData: stepsData,
       sectionTitle: "Hackathon Info",
+      currentStep: 0,
     };
   },
 };
 </script>
 
-
 <style scoped>
+.sidebar {
+  width: 30%;
+  height: fit-content;
+  padding: 5px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
 </style>
