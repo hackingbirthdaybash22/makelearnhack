@@ -1,6 +1,9 @@
 <template>
   <h1>Simple Pipeline</h1>
-  <p>This is a simple pipeline to get you through your first Hackathon!</p>
+  <p>
+    This is a simple pipeline to guide you through your first Hackathon! Collect
+    badges and learn the simple steps to completing your first hackathon
+  </p>
 
   <ul class="pagination d-flex justify-content-center flex-row">
     <li
@@ -34,19 +37,27 @@
         :currentBadges="currentBadges"
       />
     </div>
-    <div class="col-md-8 row">
-      <div
-        class="col-md-6 g-4"
-        v-for="step in stepsData[currentStep - 1].stepCards"
-        :key="step.cardTitle"
-      >
-        <InfoBlock
-          :sectionTitle="step.cardTitle"
-          :sectionText="step.cardText"
-          :sectionBadge="step.cardItem"
-          :currentBadges="currentBadges"
-          @itemSaved="updateItems($event)"
-        />
+    <div class="col-md-8 column">
+      <div class="row">
+        <h5>Step {{ currentStep }}</h5>
+        <p>
+          {{ stepsData[currentStep - 1].stepTitle }}
+        </p>
+      </div>
+      <div class="row">
+        <div
+          class="col-md-6 g-4"
+          v-for="step in stepsData[currentStep - 1].stepCards"
+          :key="step.cardTitle"
+        >
+          <InfoBlock
+            :sectionTitle="step.cardTitle"
+            :sectionText="step.cardText"
+            :sectionBadge="step.cardItem"
+            :currentBadges="currentBadges"
+            @itemSaved="updateItems($event)"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -105,19 +116,20 @@ const stepsData = [
         cardSize: 1,
       },
       {
-        cardTitle: "Cons of working in teams",
-        cardText:
-          "Working in teams can be tricky especially if you are unfamiliar with your teammates, and communication or scheduling issues might interrupt your progress.",
-        cardItem: "",
-        cardSize: 1,
-      },
-      {
         cardTitle: "Cons of working solo",
         cardText:
           "Working alone means you have to figure things out on your own, and you have to be careful to not overplan your hack.",
         cardItem: "",
         cardSize: 1,
       },
+      {
+        cardTitle: "Cons of working in teams",
+        cardText:
+          "Working in teams can be tricky especially if you are unfamiliar with your teammates, and communication or scheduling issues might interrupt your progress.",
+        cardItem: "",
+        cardSize: 1,
+      },
+      
     ],
   },
   {

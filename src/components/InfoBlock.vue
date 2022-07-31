@@ -58,6 +58,8 @@ export default {
         !this.currentBadges.includes("soloBadge")
       ) {
         this.$emit("itemSaved", this.sectionBadge);
+      } else {
+        alert("You cannot collect both the solo and team badge!")
       }
     },
   },
