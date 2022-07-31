@@ -8,14 +8,14 @@
       </h1>
     </div>
     <p id="text">Your guide to&nbsp;
-      <span class="tooltip"><u id="hackathons"> hackathons.
-        <span class="tooltiptext">A hackathon is an event organized by
+      <span class="tt"><u id="hackathons"> hackathons.
+        <span class="tttext">A hackathon is an event organized by
             a company for tech enthusiasts putting up hardware or software-related challenges to be solved over a fixed
             time duration, generally two days or more.
         </span></u></span>
     </p>
 
-    <button>Let's get started!</button>
+    <button type="button" id="btn"><p class="red">Let's&nbsp;</p><p class="yellow">get&nbsp;</p><p class="blue">started!</p></button>
   </div>
 </template>
 
@@ -31,10 +31,11 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 90vh;
 }
 
 #motto {
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 75px;
@@ -45,9 +46,11 @@ export default {
 #motto-container {
   border: 1vw solid #000000;
   border-radius: 46px;
-  padding: 0px 200px;
-  margin: 5vh;
-  max-width: 60vw;
+  padding: 75px 200px;
+  margin: 5vh 0vw;
+  max-width: fit-content;
+  inline-size: min-content;
+  overflow-wrap: break-word;
 }
 
 .red {
@@ -77,16 +80,33 @@ export default {
   cursor: pointer;
 }
 
-/* Tooltip CSS gotten from w3schools*/
-.tooltip {
+#btn {
+  background-color: black;
+  margin: 100px 0vw 0vw 0vw;
+  display: flex;
+  padding: 10px;
+  border-radius: 46px;
+  height: 178px;
+  align-items: center;
+  border: transparent
+}
+
+#btn p {
+  margin: 0;
+  font-size: 55px;
+}
+
+/* tooltip CSS gotten from w3schools*/
+.tt {
   position: relative;
   display: inline-block;
 }
 
-.tooltip .tooltiptext {
+.tt .tttext {
   font-size: 15px;
   visibility: hidden;
   width: 550px;
+  max-width: 100vw;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -95,11 +115,10 @@ export default {
   position: absolute;
   z-index: 1;
   top: 100%;
-  left: 0%;
-  margin-left: -60px;
+  transform: translate(-75%, 0);
 }
 
-.tooltip .tooltiptext::after {
+.tt .tttext::after {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -110,7 +129,7 @@ export default {
   border-color: transparent transparent black transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.tt:hover .tttext {
   visibility: visible;
 }
 
@@ -122,5 +141,28 @@ export default {
   #text {
     flex-direction: column;
   }
-} 
+
+  #motto-container {
+    padding: 10vh 5vw;
+  }
+  
+  #btn {
+    max-height: 70px;
+  }
+
+  #btn p {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #motto, #text, p {
+    font-size: 30px;
+  }
+
+  #btn p {
+    font-size: 25px;
+  }
+}
+
 </style>
