@@ -6,6 +6,7 @@ import GettingStarted from "../views/GettingStarted.vue";
 import HappyBirthday from "../views/HappyBirthday.vue";
 import SimplePipeline from "@/views/SimplePipeline.vue";
 import Faq from "../views/Faq.vue";
+import NotFound from "../views/NotFound.vue";
 
 const routes = [
   {
@@ -39,12 +40,13 @@ const routes = [
     path: "/simplepipeline",
     name: "SimplePipeline",
     component: SimplePipeline,
-  }, 
+  },
   {
     path: "/faq",
     name: "FAQ",
     component: Faq,
-  }
+  },
+  { path: "/:pathMatch(.*)*", component: NotFound },
 ];
 
 const router = createRouter({

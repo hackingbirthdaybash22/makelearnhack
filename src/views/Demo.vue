@@ -75,7 +75,8 @@ body {
   max-width: 70vw;
 }
 
-#text, p {
-    font-size: 20px;
+#text,
+p {
+  font-size: 20px;
 }
 </style>

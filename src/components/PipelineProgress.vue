@@ -27,10 +27,15 @@
         >/7 badges in your inventory.
       </p>
       <div class="row">
-        <div class="badge-container col-md-2 m-1" v-for="badge in currentBadges" :key="badge" :title="badge">
+        <div
+          class="badge-container col-md-2 m-1"
+          v-for="badge in currentBadges"
+          :key="badge"
+          :title="badge"
+        >
           <img
             class="img-fluid"
-            :src='require(`../assets/` + badge + `.png`)'
+            :src="require(`../assets/` + badge + `.png`)"
             :alt="badge"
           />
         </div>
@@ -40,7 +45,6 @@
 </template>
 
 <script>
-
 export default {
   name: "PipelineProgress",
   components: {},

@@ -59,12 +59,11 @@ export default {
       ) {
         this.$emit("itemSaved", this.sectionBadge);
       } else {
-        alert("You cannot collect both the solo and team badge!")
+        alert("You cannot collect both the solo and team badge!");
       }
     },
   },
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

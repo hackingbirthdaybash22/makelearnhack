@@ -129,7 +129,6 @@ const stepsData = [
         cardItem: "",
         cardSize: 1,
       },
-      
     ],
   },
   {

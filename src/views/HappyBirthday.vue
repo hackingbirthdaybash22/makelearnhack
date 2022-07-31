@@ -54,6 +54,7 @@ export default {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  height: 100%;
 }
 
 #url-setting {
