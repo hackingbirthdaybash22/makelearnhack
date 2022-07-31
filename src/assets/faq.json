@@ -26,13 +26,13 @@
     {
         "id": 5,
         "category": "General",
-        "question": "What is important to build a proper hack?",
+        "question": "What is important about building proper hacks for hackathons?",
         "answer": "It is totally alright to not win anything. The most important thing about hacking is to learn new things. You can always try your luck in another hackathon!"
     },
     {
         "id": 6,
         "category": "General",
-        "question": "Who is eligible join hackathons?",
+        "question": "Who is eligible to join hackathons?",
         "answer": "Most of the time, hackathons are open to public, meaning both students and even working adults can join! Do remember to read the guidelines of the hackathon you are intending to join."
     },
     {
@@ -93,6 +93,6 @@
         "id": 16,
         "category": "About",
         "question": "How was this website built?",
-        "answer": "We made use of Google Drive/Docs for brainstorming, Figma for wireframing and planning out the pages, and GitHub for code collaboration. We also used a lot of free resources on YouTube, Medium, W3schools to help us out!"
+        "answer": "We made use of Google Drive/Docs for brainstorming, Figma for wireframing and planning out the pages, and GitHub for code collaboration. We also used a lot of free resources on YouTube, Medium, W3schools to help us out! <br/> We made use of the VueJS framework and the Bootstrap framework for the frontend. The co:here API is used on this page! "
     }
 ]
