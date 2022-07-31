@@ -59,6 +59,15 @@ To run this
 <br>
 
 ### ```demo-card``` folder
+- This folder contains a mini interactive game to introduce the various mouse events.
+
+To run this
+1. Open folder in **visual studio**
+2. Right click ```game.html``` then click ```Open with Live Server```
+
+<br>
+
+### ```demo-card``` folder
 - This folder allows you to create your own card.
 
 To run this

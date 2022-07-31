@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Demo</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+      .box {
+        padding: 150px 0;
+        width: 33%;
+        height: 75px;
+        text-align: center;
+        background: #ddd;
+        margin: 20px;
+        display: inline-block;
+        font-size: 30px;
+      }
+      #url-setting {
+        font-size: 25px;
+      }
+      #text {
+        font-size: 25px;
+      }
+      #body {
+        background-color: rgb(180, 230, 189);
+      }
+    </style>
+  </head>
+
+  <body id="body">
+    <h1>Mini game</h1>
+
+    <div id="app">
+      <a id="url-setting" v-bind:href="url">click here for code</a>
+
+      <!-- mouse event -->
+      <p id="text">I am {{ age }} year old.</p>
+      <div class="box" @mouseover="age++">mouseover</div>
+      <div class="box" @mouseleave="age--">mouseleave</div>
+      <div class="box" @dblclick="handleEvent">double click</div>
+      <div class="box" @mousemove="handleMouseMove">
+        position {{ x }} {{ y }}
+      </div>
+
+      <h1>mouseover increases age by 1</h1>
+      <h1>mouseleave decreases age by 1</h1>
+      <h1>double click multiplies age by 2</h1>
+      <h1>position give position of mouse in box</h1>
+
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
