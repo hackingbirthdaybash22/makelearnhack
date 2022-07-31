@@ -5,14 +5,26 @@
             <p class="yellow">a&nbsp;</p>
             <p class="blue">question?</p>
         </h1>
-        <form id="searchbar" class="d-flex" style="width: 60vw;">
+        <form id="searchbar" class="d-flex" style="width: 60vw; margin-bottom: 2vh">
             <input id="search-input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline" type="submit"><i class="fas fa-search"></i></button>
         </form>
         <div id="loading-spinner" class="spinner-border text-danger" role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
-        <div id="questions"></div>
+        <div id="questions">
+            <div id="question" v-for="element in faq" :key="element.id">
+                <div class="card" id="question" style="width: 60vw;margin: 0vh 10vw 2vh; text-align: left">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ element.question }}</h5>
+                        <br />
+                        <p class="card-text" style="text-align: left; list-style-position: inside;"
+                            v-html="element.answer">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -24,28 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const loadingSpinner = document.getElementById("loading-spinner");
     const form = document.getElementById("searchbar");
 
-    // load all questions on first load
-    questionJson.forEach((element) => {
-        let question = document.createElement("div");
-        question.innerHTML = `
-        <div class="card" id="question" style="width: 60vw;margin: 2vw 10vw; text-align: left">
-        <div class="card-body">
-        <h5 class="card-title">${element.question}</h5>
-        <br/>
-        <p class="card-text" style="text-align: left; list-style-position: inside;">${element.answer}</p>
-        </div>
-        </div>
-        `;
-        questions.appendChild(question);
-    });
-
     form.addEventListener("submit", function (e) {
         e.preventDefault();
         loadingSpinner.style.display = "flex";
 
         let query = document.getElementById("search-input").value.toLowerCase();
-        let questions = document.getElementById("questions");
         questions.innerHTML = ``; //set the div to nothing first
+
         const data = {
             taskDescription: '',
             outputIndicator: '',
@@ -87,11 +84,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 loadingSpinner.style.display = "none";
                 console.error("Error:", error);
             });
-    }); 
+    });
 });
 
 export default {
     name: "FAQ",
+    data() {
+        return {
+            faq: questionJson,
+        };
+    },
 };
 </script>
 
