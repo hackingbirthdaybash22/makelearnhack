@@ -34,8 +34,6 @@ export default {
 </script>
 <style>
 .info {
-  background-color: skyblue;
-
   font-size: 125px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 
@@ -53,8 +51,8 @@ export default {
   background-position: center 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  height: 100%;
+  background-size: contain;
+  height: 90vh;
 }
 
 #url-setting {
