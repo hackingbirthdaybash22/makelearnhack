@@ -7,21 +7,31 @@
         <p class="blue">Hack</p>
       </h1>
     </div>
-    <p id="text">Your guide to&nbsp;
-      <span class="tt"><u id="hackathons"> hackathons.
-        <span class="tttext">A hackathon is an event organized by
-            a company for tech enthusiasts putting up hardware or software-related challenges to be solved over a fixed
-            time duration, generally two days or more.
-        </span></u></span>
+    <p id="text">
+      Your guide to&nbsp;
+      <span class="tt"
+        ><u id="hackathons">
+          hackathons.
+          <span class="tttext"
+            >A hackathon is an event organized by a company for tech enthusiasts
+            putting up hardware or software-related challenges to be solved over
+            a fixed time duration, generally two days or more.
+          </span></u
+        ></span
+      >
     </p>
 
-    <button type="button" id="btn"><p class="red">Let's&nbsp;</p><p class="yellow">get&nbsp;</p><p class="blue">started!</p></button>
+    <button type="button" id="btn" onclick="location.href = '#/simplePipeline'">
+      <p class="red">Let's&nbsp;</p>
+      <p class="yellow">get&nbsp;</p>
+      <p class="blue">started!</p>
+    </button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
 };
 </script>
 
@@ -88,7 +98,7 @@ export default {
   border-radius: 46px;
   height: 178px;
   align-items: center;
-  border: transparent
+  border: transparent;
 }
 
 #btn p {
@@ -134,7 +144,9 @@ export default {
 }
 
 @media screen and (max-width: 920px) {
-  #motto, #text, p {
+  #motto,
+  #text,
+  p {
     font-size: 50px;
   }
 
@@ -145,7 +157,7 @@ export default {
   #motto-container {
     padding: 10vh 5vw;
   }
-  
+
   #btn {
     max-height: 70px;
   }
@@ -156,7 +168,9 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
-  #motto, #text, p {
+  #motto,
+  #text,
+  p {
     font-size: 30px;
   }
 
@@ -164,5 +178,4 @@ export default {
     font-size: 25px;
   }
 }
-
 </style>
