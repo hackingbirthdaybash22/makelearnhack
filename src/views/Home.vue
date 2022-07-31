@@ -21,7 +21,7 @@
       >
     </p>
 
-    <button type="button" id="btn">
+    <button type="button" id="btn" onclick="location.href = '#/simplePipeline'">
       <p class="red">Let's&nbsp;</p>
       <p class="yellow">get&nbsp;</p>
       <p class="blue">started!</p>
