@@ -58,4 +58,8 @@ export default {
 #url-setting {
   font-size: 25px;
 }
+
+#app {
+  height: 100vh;
+}
 </style>
