@@ -52,7 +52,10 @@ export default {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
-  height: 90vh;
+}
+
+body {
+  height: 100vh
 }
 
 #url-setting {
