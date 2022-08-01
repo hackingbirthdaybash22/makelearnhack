@@ -1,7 +1,7 @@
 <template>
   <back-to-demo></back-to-demo>
 
-  <body class="body" id="body">
+  <body class="body" id="body" style="height: 100vh">
     <div id="app">
       <a id="url-setting" v-bind:href="url">click here for code</a>
 
@@ -52,10 +52,6 @@ export default {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
-}
-
-body {
-  height: 100vh
 }
 
 #url-setting {
