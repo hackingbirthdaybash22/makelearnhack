@@ -64,3 +64,7 @@ To run this
 To run this
 1. Open folder in **visual studio**
 2. Right click ```card.html``` then click ```Open with Live Server```
+
+
+## Credit
+Credits for badges images from Canva!
