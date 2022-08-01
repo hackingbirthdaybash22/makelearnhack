@@ -233,7 +233,7 @@ const stepsData = [
       {
         cardTitle: "Setting up and organization",
         cardText:
-          "Typically, we have found that keeping hackathon repositories in test <a href=''>Github organizations</a> helps to keep things neat, especially if you plan to do many hackathons in the long run.",
+          "Typically, we have found that keeping hackathon repositories in test <a href='https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations'>Github organizations</a> helps to keep things neat, especially if you plan to do many hackathons in the long run.",
         cardItem: "",
         cardSize: 1,
       },
