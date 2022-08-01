@@ -233,7 +233,7 @@ const stepsData = [
       {
         cardTitle: "Setting up and organization",
         cardText:
-          "Typically, we have found that keeping hackathon repositories in <a href='https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations>Github organizations</a> helps to keep things neat, especially if you plan to do many hackathons in the long run.",
+          "Typically, we have found that keeping hackathon repositories in <a href='https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations'>Github organizations</a> helps to keep things neat, especially if you plan to do many hackathons in the long run.",
         cardItem: "",
         cardSize: 1,
       },
@@ -254,7 +254,7 @@ const stepsData = [
       {
         cardTitle: "Github Projects",
         cardText:
-          "<a href='https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects'>Github Projects</a> is an excellent task managemetn system to help you plan your time and prioritize your tasks, especially working in groups!",
+          "<a href='https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects'>Github Projects</a> is an excellent task management system to help you plan your time and prioritize your tasks, especially working in groups!",
         cardItem: "",
         cardSize: 1,
       },
@@ -308,7 +308,7 @@ const stepsData = [
       {
         cardTitle: "Record a video",
         cardText:
-          "While not all hackathons require a demo video submission, we highly reccomend it! As the software changes and evolves, some older projects may stop worknig after a while. A demo video serves as a record of how your hack was intended to work when you developed it. Do upload your videos early before the deadline!",
+          "While not all hackathons require a demo video submission, we highly reccomend it! As the software changes and evolves, some older projects may stop working after a while. A demo video serves as a record of how your hack was intended to work when you developed it. Do upload your videos early before the deadline!",
         cardItem: "demoBadge",
         cardSize: 1,
       },
