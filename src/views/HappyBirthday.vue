@@ -1,7 +1,7 @@
 <template>
   <back-to-demo></back-to-demo>
 
-  <body class="body" id="body" style="height: 100vh">
+  <body class="body" id="body">
     <div id="app">
       <a id="url-setting" v-bind:href="url">click here for code</a>
 
@@ -32,7 +32,7 @@ export default {
   methods: {},
 };
 </script>
-<style>
+<style scoped>
 .info {
   font-size: 125px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -52,6 +52,7 @@ export default {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
+  height: 100vh;
 }
 
 #url-setting {
